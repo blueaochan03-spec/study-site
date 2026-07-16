@@ -418,6 +418,58 @@ main{
 }
 .turn.role-observer .who{color:var(--accent-2);font-style:normal;}
 
+/* 語群選択問題 */
+.q-type{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  border-radius:6px;
+  padding:2px 9px;
+  margin-right:8px;
+  letter-spacing:.04em;
+}
+.q-type.type-word{background:var(--accent-2-soft);color:var(--accent-2);}
+.q-type.type-essay{background:var(--accent-soft);color:var(--accent);}
+.passage{
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px 18px;
+  font-size:14.5px;
+  line-height:2.1;
+  margin:12px 0;
+}
+.blank{
+  display:inline-block;
+  min-width:2.6em;
+  padding:0 4px;
+  border-bottom:2px solid var(--accent-2);
+  font-weight:700;
+  color:var(--accent-2);
+  text-align:center;
+}
+.wordbank-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0 4px;
+}
+.word-chip{
+  display:inline-block;
+  font-size:12.5px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:4px 12px;
+  color:var(--text-dim);
+}
+.wordbank-label{
+  font-size:11.5px;
+  color:var(--text-dim);
+  letter-spacing:.05em;
+  margin-bottom:6px;
+}
+
 /* 資料一覧 */
 .week-group{
   margin-bottom:28px;
