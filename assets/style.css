@@ -30,6 +30,52 @@
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+
+/* パスワードゲート */
+.gate-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.gate-box{
+  width:100%;
+  max-width:340px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:32px 28px;
+  text-align:center;
+}
+.gate-title{
+  font-size:15px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+.gate-input{
+  width:100%;
+  font-size:14px;
+  font-family:inherit;
+  padding:10px 14px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--surface-2);
+  color:var(--text);
+  margin-bottom:14px;
+}
+.gate-input:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.gate-submit{width:100%;}
+.gate-error{
+  color:#c0392b;
+  font-size:12.5px;
+  margin-top:10px;
+  min-height:1em;
+}
 body{
   margin:0;
   background:var(--bg);
