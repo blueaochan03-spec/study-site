@@ -320,6 +320,13 @@ main{
   margin:0;
   white-space:pre-wrap;
 }
+.answer-block mark{
+  background:var(--accent-soft);
+  color:var(--text);
+  padding:0 2px;
+  border-radius:2px;
+  font-weight:700;
+}
 .char-count{
   font-size:11.5px;
   color:var(--text-dim);
@@ -462,6 +469,16 @@ main{
   font-size:11.5px;
   color:var(--text-dim);
 }
+
+.section-head{
+  font-size:13px;
+  color:var(--text-dim);
+  letter-spacing:.06em;
+  margin:40px 0 16px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--border);
+}
+.section-head:first-of-type{margin-top:0;}
 
 /* workflow */
 .steps{

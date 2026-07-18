@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.q-card');
   if (!cards.length) return;
 
-  const storeKey = 'shakaigaku-b-checked';
+  const storeKey = 'checked:' + location.pathname;
   const loadChecked = () => {
     try { return JSON.parse(localStorage.getItem(storeKey) || '{}'); }
     catch { return {}; }
