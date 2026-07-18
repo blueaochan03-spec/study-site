@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.q-card');
   if (!cards.length) return;
 
-  const storeKey = 'checked:' + location.pathname;
+  const courseSlug = (location.pathname.match(/\/courses\/([^/]+)\//) || [,'default'])[1];
+  const storeKey = courseSlug + '-checked';
   const loadChecked = () => {
     try { return JSON.parse(localStorage.getItem(storeKey) || '{}'); }
     catch { return {}; }
