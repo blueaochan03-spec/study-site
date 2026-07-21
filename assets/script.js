@@ -44,6 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    const outlineBtn = card.querySelector('.js-toggle-outline');
+    const outlineBody = card.querySelector('.outline-body');
+    if (outlineBtn && outlineBody) {
+      const setOutlineState = (open) => {
+        outlineBody.classList.toggle('show', open);
+        outlineBtn.textContent = open ? '論述の流れを隠す' : '論述の流れを見る';
+        outlineBtn.setAttribute('aria-expanded', String(open));
+      };
+      setOutlineState(false);
+      outlineBtn.addEventListener('click', () => {
+        setOutlineState(!outlineBody.classList.contains('show'));
+      });
+    }
+
     if (checkBtn) {
       const refresh = () => {
         const done = !!checked[id];

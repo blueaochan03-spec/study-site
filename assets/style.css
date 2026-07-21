@@ -366,6 +366,71 @@ main{
 }
 .res-link:hover{opacity:.85;}
 
+/* 論述の流れ */
+.btn.js-toggle-outline{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+.outline-body{
+  display:none;
+  padding:4px 24px 26px;
+  border-top:1px dashed var(--border);
+}
+.outline-body.show{display:block;}
+.outline-block{
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-left:4px solid var(--accent);
+  border-radius:0 10px 10px 0;
+  padding:18px 20px;
+  margin-top:18px;
+}
+.outline-block h4{
+  margin:0 0 4px;
+  font-size:12.5px;
+  color:var(--accent);
+  letter-spacing:.06em;
+}
+.outline-block .outline-hint{
+  margin:0 0 14px;
+  font-size:12px;
+  color:var(--text-dim);
+}
+.flow-outline{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.flow-step{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:9px 14px;
+  font-size:13.5px;
+  line-height:1.6;
+  color:var(--text);
+}
+.flow-step .flow-arrow{
+  color:var(--accent-2);
+  font-weight:700;
+  margin-right:8px;
+}
+.flow-step[data-lvl="0"]{margin-left:0;font-weight:600;}
+.flow-step[data-lvl="1"]{margin-left:18px;}
+.flow-step[data-lvl="2"]{margin-left:36px;}
+.flow-step[data-lvl="3"]{margin-left:54px;}
+.flow-step[data-lvl="4"]{margin-left:72px;}
+.flow-step[data-lvl="5"]{margin-left:90px;}
+.flow-step[data-lvl="6"]{margin-left:108px;}
+@media (max-width:480px){
+  .flow-step[data-lvl="1"]{margin-left:10px;}
+  .flow-step[data-lvl="2"]{margin-left:20px;}
+  .flow-step[data-lvl="3"]{margin-left:30px;}
+  .flow-step[data-lvl="4"]{margin-left:40px;}
+  .flow-step[data-lvl="5"]{margin-left:50px;}
+  .flow-step[data-lvl="6"]{margin-left:60px;}
+}
+
 /* 会話ログ */
 .btn.js-toggle-dialogue{
   border-color:var(--accent-2);
